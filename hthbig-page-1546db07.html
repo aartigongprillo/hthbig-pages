@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华体会 · 信息介绍页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f9fafc;
+      color: #1f2937;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 1rem;
+    }
+
+    .page {
+      max-width: 72ch;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* hero 区 */
+    .hero {
+      padding: 4rem 0 2.5rem 0;
+      border-bottom: 1px solid #e4e7ed;
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      color: #111827;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #5f6b7a;
+      max-width: 55ch;
+      margin-top: 0.5rem;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: #e9ecf0;
+      padding: 0.15rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #3b4a5a;
+      margin-top: 1.2rem;
+    }
+
+    /* 内容通用 */
+    section {
+      margin-bottom: 3.2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      color: #111827;
+      border-left: 4px solid #a0b1c4;
+      padding-left: 0.9rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #2c3e50;
+    }
+
+    p.quiet {
+      color: #5f6b7a;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: #1a4c7a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    a:hover {
+      border-bottom-color: #1a4c7a;
+    }
+
+    /* 特点卡片 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem 2rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      padding: 1.5rem 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 0 0 1px #edeff3;
+    }
+
+    .feature-item h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #1e2b3c;
+    }
+
+    .feature-item p {
+      font-size: 0.93rem;
+      color: #3b4a5a;
+      margin-bottom: 0;
+    }
+
+    /* FAQ 摘要 */
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      margin-top: 0.8rem;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      padding: 1.2rem 1.4rem;
+      border-radius: 10px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02), 0 0 0 1px #edeff3;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      color: #1a2b3a;
+    }
+
+    .faq-a {
+      font-size: 0.95rem;
+      color: #3b4a5a;
+    }
+
+    /* 底部 */
+    .footer-note {
+      margin-top: 3rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e4e7ed;
+      font-size: 0.9rem;
+      color: #5f6b7a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.8rem;
+    }
+
+    .footer-note a {
+      font-weight: 400;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .footer-note {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- hero -->
+    <div class="hero">
+      <h1>关于华体会<br>一个站点的简单介绍</h1>
+      <div class="sub">
+        这里没有夸张的标语，只有对自身定位和内容的平实叙述。华体会从最初的想法走到今天，依靠的是持续的信息整理与坦诚沟通。
+      </div>
+      <div class="tagline">站点 · 介绍 · 可信说明</div>
+    </div>
+
+    <!-- 介绍与可信说明 -->
+    <section>
+      <h2>站点定位与背景</h2>
+      <p>
+        <a href="https://hthbig.com.cn">华体会</a>是一个以信息整合与内容分享为方向的个人站点。它并不代表任何机构或品牌，也不提供任何形式的投资建议、财务承诺或诱导性服务。站内所呈现的内容均基于公开资料与个人理解编写，力求在力所能及范围内保持真实与准确。
+      </p>
+      <p>
+        运营这样一个站点，初衷是让感兴趣的人能够相对系统地了解相关话题，而不是制造焦虑或夸大某种可能性。如果你对内容有任何疑问，或发现需要修正的地方，欢迎通过站点提供的联系渠道反馈。
+      </p>
+    </section>
+
+    <!-- 特点：克制地描述几个侧面 -->
+    <section>
+      <h2>几个侧面</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>信息筛选</h3>
+          <p>不追求数量，而是从不同信源中提取相对可靠的部分，减少噪音干扰。</p>
+        </div>
+        <div class="feature-item">
+          <h3>清晰结构</h3>
+          <p>采用分块与层级组织内容，让浏览者能够按需阅读，不必从头看到尾。</p>
+        </div>
+        <div class="feature-item">
+          <h3>定期更新</h3>
+          <p>根据自身节奏补充或修订内容，保持站点活力，但不会为了更新而更新。</p>
+        </div>
+        <div class="feature-item">
+          <h3>坦诚说明</h3>
+          <p>不隐藏立场，不假装权威。华体会就是一个普通个体运营的内容站点。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使用场景或提示 -->
+    <section>
+      <h2>一些阅读提示</h2>
+      <p>
+        无论你对哪个领域感兴趣，都建议把这里的内容作为起点之一，而非唯一依据。不同来源的信息相互印证通常会更有帮助。华体会的内容不构成任何形式的决策参考，请结合自己的判断力。
+      </p>
+      <p class="quiet">
+        如果你发现站内引用的数据或事实有误，欢迎指正。站内部分链接会指向外部网页，它们并不代表本站观点，仅为提供更多背景。
+      </p>
+    </section>
+
+    <!-- FAQ 摘要 (非全部FAQ，只提取三个常见) -->
+    <section>
+      <h2>常见疑问摘要</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-q">华体会是什么类型的站点？</div>
+          <div class="faq-a">一个由个人维护的信息介绍与话题整理站点，非商业、非官方，着重于把零散信息组织成可读性较强的页面。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">内容来源可靠吗？</div>
+          <div class="faq-a">尽量引用可查证的公开信息，并会注明来源。但由于个人能力有限，无法保证绝对全面或零差错，建议交叉核对。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">如何联系站点维护者？</div>
+          <div class="faq-a">目前主要通过站内预留的电子邮箱接收反馈。所有来信都会阅读，但可能无法逐一回复，请谅解。</div>
+        </div>
+      </div>
+      <p style="margin-top: 1.2rem; font-size: 0.95rem; color: #5f6b7a;">
+        更多问题可以访问 <a href="https://hthbig.com.cn">华体会</a> 对应页面，那里有更完整的说明。
+      </p>
+    </section>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+      <span>© 华体会 · 非官方个人站点</span>
+      <span>内容仅供参考 · <a href="https://hthbig.com.cn">华体会</a></span>
+    </div>
+  </div>
+</body>
+</html>
