@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>official-texas.com · 德州扑克游戏知识索引</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f6f9;
+      color: #1e2a3e;
+      line-height: 1.6;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: linear-gradient(145deg, #0f1923 0%, #1a2a3a 100%);
+      color: #e8edf2;
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: #f4f6f9;
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      transform: scaleY(0.4);
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.75rem;
+    }
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #b8c6d4;
+    }
+
+    /* 浅色正文容器 */
+    .container {
+      max-width: 1000px;
+      margin: -1.5rem auto 2rem;
+      padding: 0 1.5rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* 卡片模块 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem 1.6rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.65rem;
+      color: #0f1923;
+      border-left: 4px solid #c74b3b;
+      padding-left: 0.75rem;
+    }
+    .card p, .card li {
+      font-size: 0.95rem;
+      color: #2f3e56;
+    }
+    .card ul {
+      padding-left: 1.2rem;
+      list-style: none;
+    }
+    .card ul li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+    .card ul li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: #c74b3b;
+    }
+
+    /* 提示区 + 相关信息区 */
+    .info-row {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .highlight-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem 1.6rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      border-top: 3px solid #c74b3b;
+    }
+    .highlight-box h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #0f1923;
+    }
+    .highlight-box p {
+      font-size: 0.95rem;
+      color: #2f3e56;
+    }
+
+    /* FAQ 摘要 */
+    .faq-mini {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem 1.8rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+    .faq-mini h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #0f1923;
+    }
+    .faq-item {
+      margin-bottom: 0.7rem;
+      border-bottom: 1px solid #e9edf2;
+      padding-bottom: 0.7rem;
+    }
+    .faq-item:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .faq-q {
+      font-weight: 600;
+      color: #1e2a3e;
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 0.95rem;
+    }
+    .faq-a {
+      font-size: 0.9rem;
+      color: #4a5b72;
+    }
+
+    /* 链接强调色 */
+    a {
+      color: #c74b3b;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    a:hover {
+      border-bottom-color: #c74b3b;
+    }
+    .inline-link {
+      font-weight: 500;
+    }
+
+    /* 场景标签 */
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+    }
+    .tag {
+      background: #eef2f7;
+      color: #1e2a3e;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* 响应式 */
+    @media (max-width: 720px) {
+      .card-grid, .info-row {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 1.5rem;
+      color: #6a7b90;
+      font-size: 0.85rem;
+      border-top: 1px solid #dde3ec;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <header class="hero">
+    <h1>德州扑克游戏 · 知识库入口</h1>
+    <p>集中整理规则、策略、术语与常见疑问，帮助新玩家快速定位网站用途，更顺畅地了解 <a href="https://official-texas.com" class="inline-link" style="color:#e8b89d;border-bottom-color:#e8b89d;">德州扑克游戏</a> 的核心内容。</p>
+  </header>
+
+  <!-- 正文区域 -->
+  <main class="container">
+
+    <!-- 目录感卡片布局：介绍 + 特点 -->
+    <div class="card-grid">
+      <section class="card">
+        <h3>📘 网站定位说明</h3>
+        <p>official-texas.com 围绕 <a href="https://official-texas.com">德州扑克游戏</a> 提供系统的信息梳理，包括基础规则、手牌排名、下注流程以及常见比赛结构。内容适合从零了解扑克的用户，也适合希望巩固细节的玩家参考。</p>
+        <div class="tag-list">
+          <span class="tag">规则</span>
+          <span class="tag">手牌</span>
+          <span class="tag">位置</span>
+          <span class="tag">底池</span>
+        </div>
+      </section>
+      <section class="card">
+        <h3>⚙️ 内容特点</h3>
+        <ul>
+          <li>分章节解释翻前、翻后、转牌与河牌行动</li>
+          <li>涵盖限注、无限注、底池限注三种主流模式</li>
+          <li>常见术语与概率速查表</li>
+          <li>面向新手与中级玩家的策略说明</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- 提示区 + 相关信息区 -->
+    <div class="info-row">
+      <div class="highlight-box">
+        <h3>💡 使用提示</h3>
+        <p>如果您是第一次接触 <a href="https://official-texas.com">德州扑克游戏</a>，建议从「基本规则」章节开始，逐步阅读手牌强度与位置概念。页面内提供大量图文对照，可随时跳转至感兴趣的部分。遇到不熟悉的术语，可检索术语表快速定位。</p>
+      </div>
+      <div class="highlight-box">
+        <h3>📎 相关信息</h3>
+        <p>该站点还整理了几种常见扑克变体的差异，包括奥马哈、五张抽牌等，并设有独立的概率计算器页面。所有内容均以教育参考为目的，不涉及真实货币对局指导。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <section class="faq-mini">
+      <h3>❓ 常见疑问（摘要）</h3>
+      <div class="faq-item">
+        <span class="faq-q">Q：德州扑克游戏需要几人才能开始？</span>
+        <span class="faq-a">A：通常 2 至 10 人，标准满员桌为 9 人或 10 人，线上也常见 6 人短桌。</span>
+      </div>
+      <div class="faq-item">
+        <span class="faq-q">Q：如何判断牌型大小？</span>
+        <span class="faq-a">A：从高到低依次为：皇家同花顺、同花顺、四条、葫芦、同花、顺子、三条、两对、一对、高牌。具体细节可查阅 <a href="https://official-texas.com">德州扑克游戏</a> 手牌排名页。</span>
+      </div>
+      <div class="faq-item">
+        <span class="faq-q">Q：位置为什么重要？</span>
+        <span class="faq-a">A：晚位置（如庄位）可以在决策前看到更多对手行动，从而获得信息优势。early position 则需更谨慎起手。</span>
+      </div>
+    </section>
+
+    <!-- 补充说明：场景示例 -->
+    <div style="background:#ffffff;border-radius:16px;padding:1.5rem 1.8rem;box-shadow:0 4px 14px rgba(0,0,0,0.04);">
+      <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:0.6rem;color:#0f1923;">📌 适用场景</h3>
+      <p style="font-size:0.95rem;color:#2f3e56;">
+        无论是线上平台规则学习，还是线下朋友局前快速复习，<a href="https://official-texas.com">德州扑克游戏</a> 的知识库结构都能帮助你按需查找。内容保持中立，不涉及具体平台推荐，仅提供通用的游戏理解框架。
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>本页面为知识索引介绍，内容仅供参考。所有信息来自 official-texas.com</p>
+  </footer>
+
+</body>
+</html>
